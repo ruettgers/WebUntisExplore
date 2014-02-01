@@ -16,14 +16,14 @@ public class UsersService {
 		return us;
 	}
 
-	public Users createUsers(Integer id, String name) {
+/*	public Users createUsers(Integer id, String name) {
 		Users usr = new Users();
 		usr.setName(name);
 		usr.setUSER_ID(id.toString());
 		Service.getEntityManagerInstance().persist(usr);
 		return usr;
 	}
-
+*/
 
 	@SuppressWarnings("unchecked")
 	public List<Users> findByName(String name) {
