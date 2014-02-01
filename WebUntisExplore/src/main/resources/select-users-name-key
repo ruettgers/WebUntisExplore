@@ -1,0 +1,2 @@
+SELECT NAME, PERSONALNAME
+  FROM `webuntis`.`users`
