@@ -1,8 +1,8 @@
 LOAD DATA 
-LOCAL INFILE 'P:/Data/workspace/webtools/WebUntisDatabase/src/main/resources/flatfiles/WEGym-Freiburg_20140129/users.txt' 
-INTO TABLE users
-COLUMNS TERMINATED BY '\t'
-IGNOR 1 LINES
+INFILE 'E:/users.txt' 
+INTO TABLE USERS
+FIELDS TERMINATED BY '\t'
+lines terminated by '\n'
 (
 Mandant,
 USER_ID,
