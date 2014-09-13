@@ -18,17 +18,20 @@ import java.util.Map;
 public class UsersCache {
 	
 
-		protected static Map<String, Users> usersNameCache;
+	protected static Map<String, Users> usersNameCache;
+	protected static Map<String, Users> usersExtKeyCache;
 		protected static UsersCache usc;
 		
 		private UsersCache()
 		{
 			usersNameCache = new HashMap<String, Users>();
+			usersExtKeyCache = new HashMap<String, Users>();
 			UsersService us = UsersService.getInstance();
 			Collection<Users> users = us.findAll();
 			for(Users u : users)
 			{
 				usersNameCache.put(u.getName(),u);
+				usersExtKeyCache.put(u.getPersonalName(),u);
 			}
 			
 		}
@@ -55,4 +58,17 @@ public class UsersCache {
 		{
 			return usersNameCache.containsKey(name);
 		}
+		public Users getUserByName(String name)
+		{
+			return usersNameCache.get(name);
+		}
+		public boolean containsExtKey(String extKey)
+		{
+			return usersExtKeyCache.containsKey(extKey);
+		}
+		public Users getUserByExtKey(String extKey)
+		{
+			return usersExtKeyCache.get(extKey);
+		}
+
 }

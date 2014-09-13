@@ -1,5 +1,6 @@
+TRUNCATE table USERS;
 LOAD DATA 
-INFILE 'E:/users.txt' 
+INFILE 'P:/Data/eclipse/GIT/GitRepoDR/WebUntisExplore/WebUntisExplore/src/main/files/users-2014-09-13-09-59-vorImportNeue.txt' 
 INTO TABLE USERS
 FIELDS TERMINATED BY '\t'
 lines terminated by '\n'
